@@ -1,4 +1,4 @@
-import { useEffect, useState, type JSX } from 'react'
+import {type JSX } from 'react'
 import { useAppSelector } from '@/redux/hooks'
 import { Navigate } from 'react-router'
 import Spinner from '../Loader/Spinner'
@@ -8,14 +8,10 @@ type AuthRouteProps = {
 }
 
 const AuthRoute = ({children}: AuthRouteProps) => {
-  const {userInfo} = useAppSelector(state => state.user)
-  const [loading, setLoading] = useState(true)
+  const {userInfo, isUserLoading} = useAppSelector(state => state.user)
+  console.log(userInfo)
 
-  useEffect(() => {
-    setLoading(false)
-  }, [userInfo])
-
-  if (loading) {
+  if (isUserLoading) {
     return <div className="flex justify-center items-center h-screen w-full"><Spinner /></div>
   }
 

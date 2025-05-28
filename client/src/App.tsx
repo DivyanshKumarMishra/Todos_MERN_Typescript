@@ -15,12 +15,12 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: '/todos',
-        element: <ProtectedRoute><TodosPage /></ProtectedRoute>
-      },
-      {
         path: '/auth',
         element: <AuthRoute><AuthPage /></AuthRoute>
+      },
+      {
+        path: '/todos',
+        element: <ProtectedRoute><TodosPage /></ProtectedRoute>
       },
       {
         path: '*',

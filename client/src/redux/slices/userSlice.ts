@@ -11,12 +11,8 @@ const initialState: UserStateType = {
 }
 
 const getUserInfo = createAsyncThunk('/user/getUserInfo', async () => {
-  try {
     const userInfo = await protectedAxios.get(GET_USER, {withCredentials: true})
     return userInfo.data
-  } catch (error) {
-    return error
-  }
 })
 
 const userSlice = createSlice({
