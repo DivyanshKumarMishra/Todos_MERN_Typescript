@@ -21,5 +21,4 @@ export type TodoStateType = {
 export type UserStateType = {
   userInfo: User | null
   isUserLoading: boolean
-  isUserError: boolean
 }

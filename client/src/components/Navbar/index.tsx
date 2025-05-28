@@ -7,15 +7,12 @@ import {
 import { useAppDispatch } from "@/redux/hooks";
 import { logout } from "@/redux/slices/userSlice";
 import { LogOut } from "lucide-react";
-import { useNavigate } from "react-router";
 
 const Navbar = () => {
   const dispatch = useAppDispatch();
-  const navigate = useNavigate();
 
   const handleLogout = () => {
     dispatch(logout());
-    navigate("/auth");
   };
 
   return (

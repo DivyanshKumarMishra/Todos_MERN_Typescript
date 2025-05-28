@@ -27,7 +27,6 @@ export const deleteTodoAsync = createAsyncThunk('todos/delete', async (_id: stri
 export const editTodoAsync = createAsyncThunk(
   'todos/edit',
   async ({ _id, title }: { _id: string; title: string }) => {
-    console.log(_id, title);
     const response = await protectedAxios.patch(`${EDIT_TODO}/${_id}`, {title, action: 'edit'});
     return response.data;      
   }

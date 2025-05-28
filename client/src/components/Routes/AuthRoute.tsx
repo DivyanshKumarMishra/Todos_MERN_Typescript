@@ -9,7 +9,6 @@ type AuthRouteProps = {
 
 const AuthRoute = ({children}: AuthRouteProps) => {
   const {userInfo, isUserLoading} = useAppSelector(state => state.user)
-  console.log(userInfo)
 
   if (isUserLoading) {
     return <div className="flex justify-center items-center h-screen w-full"><Spinner /></div>
