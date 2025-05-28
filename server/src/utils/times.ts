@@ -1,0 +1,9 @@
+const MILLISECONDS_PER_SECOND: number = 1000;
+const SECONDS_PER_MINUTE: number = 60;
+const MINUTES_PER_HOUR: number = 60;
+const HOURS_PER_DAY: number = 24;
+const DAYS_PER_WEEK: number = 7;
+
+const TOKEN_EXPIRY: number = DAYS_PER_WEEK * HOURS_PER_DAY * MINUTES_PER_HOUR * SECONDS_PER_MINUTE;
+
+export { TOKEN_EXPIRY, MILLISECONDS_PER_SECOND };
