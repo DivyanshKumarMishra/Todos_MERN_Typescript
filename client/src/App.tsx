@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: '/auth',
+        path: '/',
         element: <AuthRoute><AuthPage /></AuthRoute>
       },
       {
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
       },
       {
         path: '*',
-        element: <Navigate to='/todos' replace/>
+        element: <Navigate to='/' replace/>
       }
     ]
   }
