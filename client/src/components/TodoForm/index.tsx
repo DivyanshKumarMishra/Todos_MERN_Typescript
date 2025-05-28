@@ -2,7 +2,6 @@ import {useState, type FormEvent} from 'react'
 import { Input, Button } from '../ui'
 import { useAppDispatch } from '@/redux/hooks'
 import { addTodoAsync } from '../../redux/slices/todoSlice'
-import { set } from 'react-hook-form'
 
 const TodoForm = () => {
     const [todo, setTodo] = useState<string>("")
